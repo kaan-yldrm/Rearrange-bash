@@ -67,5 +67,7 @@ soffice --convert-to pdf $adayperfsoru/*docx --outdir $adayperfsoru
 sudo apt-get install unoconv #pdf çevirici
 
 
+#######################################
+# Sinav dosyalarini ayirma vakti
 
 
