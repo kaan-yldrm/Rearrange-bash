@@ -24,4 +24,4 @@ done
 
 # Dosyaları unzip yapıp, alt klasörlerinin isimlerini düzenliyor
 
-./Step2.sh #ikinci asama scriptini calistirir
+./GiTL/Rearrange-bash/Step2.bash #ikinci asama scriptini calistirir
