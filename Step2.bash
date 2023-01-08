@@ -34,10 +34,10 @@ do
         newname01x=$(ls $adayperfsoru | head -1)
         newname11x=${newname01x##* (}
         newname21x=${newname11x%) *}
-        mv "$adayperfsoru/$newname01x" "$adayperfsoru/z-$newname21x-1-P.Senaryo.docx"
+        mv "$adayperfsoru/$newname01x" "$adayperfsoru/z-$newname21x-1-P.Senaryo.docx" # isimlerin onune z koyuyor siralamayi saglamak icin
 done
 
-find $adayperfsoru -name 'z-*' | rename 's/z-//'
+find $adayperfsoru -name 'z-*' | rename 's/z-//' # ondeki z leri kaldiriyor
 
 #12694187110-0-P.Degerlendirme.pdf 
 #12694187110-1-P.Senaryo.pdf  
