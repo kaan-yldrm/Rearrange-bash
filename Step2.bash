@@ -34,16 +34,16 @@ do
         newname01x=$(ls $adayperfsoru | head -1)
         newname11x=${newname01x##* (}
         newname21x=${newname11x%) *}
-        mv "$adayperfsoru/$newname01x" "$adayperfsoru/z-$newname21x-1-P.Senaryo.pdf"
+        mv "$adayperfsoru/$newname01x" "$adayperfsoru/z-$newname21x-1-P.Senaryo.docx"
 done
 
 find $adayperfsoru -name 'z-*' | rename 's/z-//'
 
-12694187110-0-P.Degerlendirme.pdf 
-12694187110-1-P.Senaryo.pdf  
-12694187110-2-P.Kroki.pdf       
-12694187110-3-P.Forklift PK.pdf 
-12694187110-4-P.Tas.Islem.pdf  
+#12694187110-0-P.Degerlendirme.pdf 
+#12694187110-1-P.Senaryo.pdf  
+#12694187110-2-P.Kroki.pdf       
+#12694187110-3-P.Forklift PK.pdf 
+#12694187110-4-P.Tas.Islem.pdf  
 
 # libreoffice pdf çevirmesi için java güncellemesi aşağıda
 # sudo apt-get install default-jre libreoffice-java-common 
@@ -64,7 +64,7 @@ soffice --convert-to pdf $adayperfsoru/*docx --outdir $adayperfsoru
 #     mv "$file" "$newname"
 # done
 
-sudo apt-get install unoconv #pdf çevirici
+# sudo apt-get install unoconv #pdf çevirici
 
 
 #######################################
