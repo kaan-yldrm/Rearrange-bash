@@ -70,4 +70,8 @@ sudo apt-get install unoconv #pdf çevirici
 #######################################
 # Sinav dosyalarini ayirma vakti
 
+# 1, 5, 6, 8, 9,                COP
 
+# 3 numara - Forkilft PK        Devam   No3
+# 4 numara - Yuk Tasima Korki   Devam   No2
+# 7 numara - Tasima islem Formu Devam   No4
