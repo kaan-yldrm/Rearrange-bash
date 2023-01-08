@@ -45,12 +45,11 @@ find $adayperfsoru -name 'z-*' | rename 's/z-//'
 12694187110-3-P.Forklift PK.pdf 
 12694187110-4-P.Tas.Islem.pdf  
 
-
-sudo apt-get install default-jre libreoffice-java-common # libreoffice pdf çevirmesi için java güncellemesi
+# libreoffice pdf çevirmesi için java güncellemesi aşağıda
+# sudo apt-get install default-jre libreoffice-java-common 
 
 soffice --convert-to pdf $adayperfsoru/*docx --outdir $adayperfsoru
 
-hepsini yeniden 1,2,3..16 şeklinde önüne 1- gibi isim verip sonra ekleme çıkartma işlemlerini yapmalıyım
 
 # 16 kere yaptıktan sonra 17.de artık .pdf.pdf olmaya başlıyor for döngüsü ve break koşulu gerek
 
