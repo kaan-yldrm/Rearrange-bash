@@ -23,7 +23,6 @@ find $syapiciperf -name 'z-*' | rename 's/z-//'
 
 mv "$syapiciperf" "$dosyayolu/2-1-Performans-Ic-Zarf"
 
-
 ####################################### 
 #P.Sinav Aday Soru Dosyalari
 
@@ -46,7 +45,7 @@ find $adayperfsoru -name 'z-*' | rename 's/z-//' # ondeki z leri kaldiriyor
 #12694187110-4-P.Tas.Islem.pdf  
 
 # libreoffice pdf çevirmesi için java güncellemesi aşağıda
-# sudo apt-get install default-jre libreoffice-java-common 
+# sudo apt-get install default-jre libreoffice-java-common
 
 soffice --convert-to pdf $adayperfsoru/*docx --outdir $adayperfsoru
 
@@ -66,7 +65,6 @@ soffice --convert-to pdf $adayperfsoru/*docx --outdir $adayperfsoru
 
 # sudo apt-get install unoconv #pdf çevirici
 
-
 #######################################
 # Sinav dosyalarini ayirma vakti
 
@@ -75,3 +73,4 @@ soffice --convert-to pdf $adayperfsoru/*docx --outdir $adayperfsoru
 # 3 numara - Forkilft PK        Devam   No3
 # 4 numara - Yuk Tasima Korki   Devam   No2
 # 7 numara - Tasima islem Formu Devam   No4
+
