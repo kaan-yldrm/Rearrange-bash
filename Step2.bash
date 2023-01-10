@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dosyayolu=$(find ./kaan -name '*Sinav_Listeleri')
+dosyayolu=$(find . -name '*Sinav_Listeleri')
 syapiciperf="${dosyayolu}/Aday_Kontrol_Listeleri"
 adayperfsoru="${dosyayolu}/P.Sinav_Aday_Soru_Dosyalari"
 perfliste="${dosyayolu}/Performans_Sinavi_Aday_Listesi"
@@ -19,7 +19,7 @@ do
         mv "$syapiciperf/$newname0x" "$syapiciperf/z-$newname2x-0-P.Degerlendirme.pdf"
 done
 
-find $syapiciperf -name 'z-*' | rename 's/z-//'
+
 
 mv "$syapiciperf" "$dosyayolu/2-1-Performans-Ic-Zarf"
 
@@ -34,10 +34,12 @@ do
         newname11x=${newname01x##* (}
         newname21x=${newname11x%) *}
         mv "$adayperfsoru/$newname01x" "$adayperfsoru/z-$newname21x-1-P.Senaryo.docx" # isimlerin onune z koyuyor siralamayi saglamak icin
+        tbmwd=$(find $adayperfsoru -type f -name '*-1-P.Senaryo.docx')    # yapılandırılmış dosyaları bulup bir adresini değişkene kaydediyor
+        mv "$tbmwd" "$dosyayolu/2-1-Performans-Ic-Zarf"                               # yapılandırılmış dosyaları tek tek 2-1-Performans-Ic-Zarf klasörüne atıyor
 done
 
-find $adayperfsoru -name 'z-*' | rename 's/z-//' # ondeki z leri kaldiriyor
 
+find $dosyayolu/2-1-Performans-Ic-Zarf -name 'z-*' | rename 's/z-//' # ondeki z leri kaldiriyor
 #12694187110-0-P.Degerlendirme.pdf 
 #12694187110-1-P.Senaryo.pdf  
 #12694187110-2-P.Kroki.pdf       
