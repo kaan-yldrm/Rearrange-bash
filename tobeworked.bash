@@ -19,7 +19,8 @@ do
         newname01xa=$(find $tbw -name '3- Forklift Periyodik Kontrol Formu*' | head -1)  # kaan/1220734_Sinav_Listeleri/to_be_worked/3- Forklift Periyodik Kontrol Formu 12694187110-1.docx
         newname11xa=${newname01xa##* } # son bosluga kadar olan herseyi sil               # 12694187110-1.docx
         newname21xa=${newname11xa%-*} # son tire isaretinden sonra herseyi sil            # 12694187110
-        mv "$newname01xa" "$tbw/z-$newname21xa-3-P.Forklift_PK.docx"
+        mv "$newname01xa" "$dosyayolu/2-1-Performans-Ic-Zarf/z-$newname21xa-3-P.Forklift_PK.docx"
+        #mv "$tbw/z-$newname21xa-3-P.Forklift_PK.docx" "$dosyayolu/2-1-Performans-Ic-Zarf/z-$newname21xa-3-P.Forklift_PK.docx"
 
         # 4- Yuk Tasima Krokisi >> 2-P.Kroki
         newname01xb=$(find $tbw -name '4- Yuk Tasima Krokisi*' | head -1)  
@@ -35,7 +36,8 @@ do
 done
 
 find $tbw -name 'z-*' | rename 's/z-//'
-
+#tbm=$(find $tbw -type f -name '*.pdf')
+#mv "$tbw/2-1-Performans-Ic-Zarf*.docx""$dosyayolu/2-1-Performans-Ic-Zarf*.docx"
 
 
 # find kaan/1220734_Sinav_Listeleri/to_be_worked/ -name '3- Forklift Periyodik Kontrol Formu*' | head -1
